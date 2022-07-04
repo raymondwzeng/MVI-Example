@@ -7,6 +7,6 @@ package com.macandswiss.mviexample.mvi
  *
  * We could also use generics here @ declaration to guarantee that a certain state/action pair is used
  */
-interface Reducer {
+interface Reducer<State, Action> {
     fun reduce(currentState: State, action: Action) : State
 }
