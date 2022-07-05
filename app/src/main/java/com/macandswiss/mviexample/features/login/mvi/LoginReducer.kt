@@ -1,4 +1,4 @@
-package com.macandswiss.mviexample.login.mvi
+package com.macandswiss.mviexample.features.login.mvi
 
 import com.macandswiss.mviexample.mvi.Reducer
 
