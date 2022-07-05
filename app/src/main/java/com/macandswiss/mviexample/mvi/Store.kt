@@ -8,9 +8,9 @@ import kotlinx.coroutines.flow.StateFlow
  *
  * We want the screen to start at a given state, and use its specific reducer to navigate around its own "FSM".
  */
-class Store(
+class Store<State, Action>(
     initialState: State,
-    private val reducer: Reducer
+    private val reducer: Reducer<State, Action>
 ) {
     private val _currentState = MutableStateFlow(initialState)
     val state : StateFlow<State> = _currentState //Exposes current state to any class that uses the store
